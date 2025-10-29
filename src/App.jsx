@@ -39,78 +39,6 @@ useEffect(() => {
   return () => clearInterval(timer);
 }, [eventDate]);
 
-  // const handleRegister = () => {
-  //   // Navigate to registration page or open registration form
-  //   window.location.href = '/register';
-  // };
-
-//   const handleDownloadGuidelines = () => {
-//     // Create guidelines PDF content
-//     const guidelinesText = `
-// ResearchAThon Guidelines
-
-// 1. Team Formation
-//    - Teams can have 1-5 members
-//    - Each team must have a faculty guide
-//    - All team members must be from the same institution
-
-// 2. Eligibility
-//    - Open to undergraduate and postgraduate students
-//    - Valid student ID required
-//    - All disciplines welcome
-
-// 3. Project Requirements
-//    - Original research work
-//    - Clear problem statement and methodology
-//    - Implementation or prototype preferred
-//    - Proper documentation required
-
-// 4. Submission Guidelines
-//    - Submit project abstract (500 words max)
-//    - Include project timeline
-//    - Mention technologies/methodologies used
-//    - List all team members and guide details
-
-// 5. Evaluation Criteria
-//    - Innovation and originality (30%)
-//    - Technical implementation (25%)
-//    - Social impact (20%)
-//    - Presentation quality (15%)
-//    - Feasibility (10%)
-
-// 6. Important Dates
-//    - Registration deadline: Check website
-//    - Abstract submission: Check website
-//    - Final presentation: Check website
-
-// 7. Rules and Regulations
-//    - Plagiarism will lead to disqualification
-//    - Decision of judges is final
-//    - Code of conduct must be followed
-//    - All participants must be present during presentation
-
-// For more information, contact the organizing committee.
-//     `;
-
-//     const blob = new Blob([guidelinesText], { type: 'text/plain' });
-//     const url = window.URL.createObjectURL(blob);
-//     const link = document.createElement('a');
-//     link.href = url;
-//     link.download = 'ResearchAThon_Guidelines.txt';
-//     document.body.appendChild(link);
-//     link.click();
-//     document.body.removeChild(link);
-//     window.URL.revokeObjectURL(url);
-//   };
-
-
-// const handleDownloadGuidelines = () => {
-//   const link = document.createElement('a');
-//   link.href = 'https://example.com/ResearchAThon_Guidelines.pdf';
-//   link.download = 'ResearchAThon_Guidelines.pdf';
-//   link.target = '_blank'; // optional — opens new tab
-//   link.click();
-// };
 
 
 
@@ -262,26 +190,44 @@ const handleDownloadGuideliness = () => {
         
         <div className={styles.guidelinesGrid}>
           <div className={styles.guidelineCard}>
+            <div className={styles.guidelineIcon}>📋</div>
+            <h3></h3>
+            <ul>
+              <li>Teams can have  a minimum of 1 member. Each team must have a faculty mentor/guide.</li>
+              <li>Open to all B.Tech and M.Tech CSE students</li>
+              <li>Teams can include members from different years or specializations</li>
+              <li>Participants can choose their own faculty mentor with prior approval.</li>
+              <li>Research work must be original, innovative, and plagiarism-free</li>
+              <li>No plagiarism. Follow code of conduct. All team members must be present during presentation.</li>
+              <li>Presentation should be in PowerPoint (PPT) format and paper work should also be presented.</li>
+              <li>Presentation Time: 5–7 minutes + 2 minutes for Q&A.</li>
+            </ul>
+
+
+          </div>
+          {/* <div className={styles.guidelineCard}>
             <div className={styles.guidelineIcon}>👥</div>
             <h3>Team Formation</h3>
-            <p>Teams can have 1-5 members with a faculty guide. All members must be from the same institution.</p>
+            <p>- Teams can have  a minimum of 1 member. Each team must have a faculty mentor/guide.<br/> - Participants can choose their own faculty mentor with prior
+approval.
+</p>
           </div>
           <div className={styles.guidelineCard}>
             <div className={styles.guidelineIcon}>✅</div>
             <h3>Eligibility</h3>
-            <p>Open to all undergraduate and postgraduate students with valid student ID.</p>
-          </div>
-          <div className={styles.guidelineCard}>
+            <p>Open to all B.Tech and M.Tech CSE students</p>
+          </div> */}
+          {/* <div className={styles.guidelineCard}>
             <div className={styles.guidelineIcon}>💡</div>
             <h3>Project Requirements</h3>
             <p>Original research work with clear problem statement, methodology, and proper documentation.</p>
-          </div>
-          <div className={styles.guidelineCard}>
+          </div> */}
+          {/* <div className={styles.guidelineCard}>
             <div className={styles.guidelineIcon}>📝</div>
             <h3>Submission</h3>
             <p>Submit project abstract (500 words max), timeline, technologies used, and team details.</p>
-          </div>
-          <div className={styles.guidelineCard}>
+          </div> */}
+          {/* <div className={styles.guidelineCard}>
             <div className={styles.guidelineIcon}>⭐</div>
             <h3>Evaluation</h3>
             <p>Judged on innovation, technical implementation, social impact, presentation, and feasibility.</p>
@@ -290,7 +236,7 @@ const handleDownloadGuideliness = () => {
             <div className={styles.guidelineIcon}>📋</div>
             <h3>Rules</h3>
             <p>No plagiarism. Follow code of conduct. All team members must be present during presentation.</p>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -307,7 +253,7 @@ const handleDownloadGuideliness = () => {
               <span className={styles.timelineDate}>Team Formation</span>
               <span className={styles.lineDate}>05-11-2025</span>
             </div>
-          </div>\
+          </div>
 
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
@@ -353,7 +299,6 @@ const handleDownloadGuideliness = () => {
         <h2 className={styles.sectionTitle}>Organized By</h2>
         <div className={styles.clubCard}>
           <div className={styles.clubLogo}>
-            {/* <div className={styles.logoCircle}>RC</div> */}
             <img className={styles.logo} src={zb}></img>
           </div>
           <div className={styles.clubInfo}>
@@ -381,17 +326,6 @@ const handleDownloadGuideliness = () => {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Contact Us</h2>
         <div className={styles.contactGrid}>
-          {/* <div className={styles.contactCard}>
-            <div className={styles.contactIcon}>📧</div>
-            <h3>Email</h3>
-            <p>researchathon@college.edu</p>
-          </div> */}
-          {/* <div className={styles.contactCard}>
-            <div className={styles.contactIcon}>📱</div>
-            <h3>Phone</h3>
-            <p>+91 98765 43210</p>
-            <p>+91 98765 43211</p>
-          </div> */}
           <div className={styles.contactCard}>
             <div className={styles.contactIcon}>📍</div>
             <h3>Venue</h3>

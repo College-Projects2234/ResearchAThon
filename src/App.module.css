@@ -281,7 +281,7 @@
 /* Guidelines Grid */
 .guidelinesGrid {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* gap: 30px; */
@@ -290,13 +290,16 @@
 
 .guidelineCard {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-  padding: 30px;
+  padding: 4rem;
+  font-size: 24px;
   border-radius: 16px;
   border: 1px solid rgba(102, 126, 234, 0.2);
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease-out both;
 }
-
+.guidelineCard li{
+  margin: 1rem;
+}
 .guidelineCard:nth-child(1) { animation-delay: 0.1s; }
 .guidelineCard:nth-child(2) { animation-delay: 0.2s; }
 .guidelineCard:nth-child(3) { animation-delay: 0.3s; }
@@ -555,13 +558,13 @@
 
 .socialLinks {
   display: flex;
-  gap: 15px;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
 }
 
 .socialLink {
-  font-size: 2rem; /* 🔹 increase icon size here */
+  font-size: 1.5rem; /* 🔹 increase icon size here */
   color: #ffffff;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -740,6 +743,8 @@
 }
 }
 
+
+
 @media (max-width: 480px) {
   .title {
     font-size: 2.5rem;
@@ -757,4 +762,13 @@
   .timeLabel {
     font-size: 0.75rem;
   }
+  .guidelineCard {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 30px;
+  font-size: 15px;
+  border-radius: 16px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
 }
