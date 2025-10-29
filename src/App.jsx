@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import Beams from './Beams';
 import zb from './img/image.png'
 import guidelinePDF from './assets/ResearchAThon_Guidelines.pdf';
+import posterPDF from './assets/Poster.pdf';
 
 function Home() {
 const [timeLeft, setTimeLeft] = useState({
@@ -38,10 +39,10 @@ useEffect(() => {
   return () => clearInterval(timer);
 }, [eventDate]);
 
-  const handleRegister = () => {
-    // Navigate to registration page or open registration form
-    window.location.href = '/register';
-  };
+  // const handleRegister = () => {
+  //   // Navigate to registration page or open registration form
+  //   window.location.href = '/register';
+  // };
 
 //   const handleDownloadGuidelines = () => {
 //     // Create guidelines PDF content
@@ -123,7 +124,7 @@ const handleDownloadGuidelines = () => {
 };
 const handleDownloadGuideliness = () => {
   const link = document.createElement('a');
-  link.href = guidelinePDF;
+  link.href = posterPDF;
   link.download = 'Poster.pdf';
   document.body.appendChild(link);
   link.click();
@@ -176,7 +177,7 @@ const handleDownloadGuideliness = () => {
               Rezo<span className={styles.titleHighlight}>N</span>ix
             </h1>
             <h1 className={styles.sub}>
-              Research<span className={styles.subHighlight}>A</span>Thon
+              Research<span className={styles.subHighlight}></span>Thon
             </h1>
             <p className={styles.tagline}>Innovate. Research. Transform.</p>
           </div>
@@ -225,12 +226,12 @@ const handleDownloadGuideliness = () => {
 )}
 
         </div>
-
+{/* 
         <div className={styles.heroAnimation}>
           <div className={styles.floatingCircle}></div>
           <div className={styles.floatingCircle}></div>
           <div className={styles.floatingCircle}></div>
-        </div>
+        </div> */}
       </section>
 
       {/* Guidelines Section */}
@@ -242,7 +243,7 @@ const handleDownloadGuideliness = () => {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              Download PDF
+              Download Event Guidelines
             </button>
             <button className={styles.downloadBtn} onClick={handleDownloadGuideliness}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -411,7 +412,7 @@ const handleDownloadGuideliness = () => {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        {/* <p>&copy; 2025 ResearchAThon. All rights reserved.</p> */}
+        <p>&copy; 2025 RezoNix. All rights reserved.</p>
         <p>Organized by The Zigbee Club</p>
       </footer>
     </div>
