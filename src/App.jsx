@@ -2,102 +2,105 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import Beams from './Beams';
 import zb from './img/image.png'
+import guidelinePDF from './assets/ResearchAThon_Guidelines.pdf';
 
 function Home() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
+const [timeLeft, setTimeLeft] = useState({
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0
+});
+const [eventStarted, setEventStarted] = useState(false);
 
-  // Set your event date here
-  const eventDate = new Date('2025-10-29T11:07:00').getTime();
+// Set your event date here
+const eventDate = new Date('2025-11-05T09:00:00').getTime();
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
+useEffect(() => {
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    console.log(distance)
+    if (distance <= 0) {
+      clearInterval(timer);
+      setEventStarted(true);
+      return;
+    }
 
-      if (distance < 0) {
-        clearInterval(timer);
-        return;
-      }
+    setTimeLeft({
+      days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((distance % (1000 * 60)) / 1000)
+    });
+  }, 1000);
 
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [eventDate]);
+  return () => clearInterval(timer);
+}, [eventDate]);
 
   const handleRegister = () => {
     // Navigate to registration page or open registration form
     window.location.href = '/register';
   };
 
-  const handleDownloadGuidelines = () => {
-    // Create guidelines PDF content
-    const guidelinesText = `
-ResearchAThon Guidelines
+//   const handleDownloadGuidelines = () => {
+//     // Create guidelines PDF content
+//     const guidelinesText = `
+// ResearchAThon Guidelines
 
-1. Team Formation
-   - Teams can have 1-5 members
-   - Each team must have a faculty guide
-   - All team members must be from the same institution
+// 1. Team Formation
+//    - Teams can have 1-5 members
+//    - Each team must have a faculty guide
+//    - All team members must be from the same institution
 
-2. Eligibility
-   - Open to undergraduate and postgraduate students
-   - Valid student ID required
-   - All disciplines welcome
+// 2. Eligibility
+//    - Open to undergraduate and postgraduate students
+//    - Valid student ID required
+//    - All disciplines welcome
 
-3. Project Requirements
-   - Original research work
-   - Clear problem statement and methodology
-   - Implementation or prototype preferred
-   - Proper documentation required
+// 3. Project Requirements
+//    - Original research work
+//    - Clear problem statement and methodology
+//    - Implementation or prototype preferred
+//    - Proper documentation required
 
-4. Submission Guidelines
-   - Submit project abstract (500 words max)
-   - Include project timeline
-   - Mention technologies/methodologies used
-   - List all team members and guide details
+// 4. Submission Guidelines
+//    - Submit project abstract (500 words max)
+//    - Include project timeline
+//    - Mention technologies/methodologies used
+//    - List all team members and guide details
 
-5. Evaluation Criteria
-   - Innovation and originality (30%)
-   - Technical implementation (25%)
-   - Social impact (20%)
-   - Presentation quality (15%)
-   - Feasibility (10%)
+// 5. Evaluation Criteria
+//    - Innovation and originality (30%)
+//    - Technical implementation (25%)
+//    - Social impact (20%)
+//    - Presentation quality (15%)
+//    - Feasibility (10%)
 
-6. Important Dates
-   - Registration deadline: Check website
-   - Abstract submission: Check website
-   - Final presentation: Check website
+// 6. Important Dates
+//    - Registration deadline: Check website
+//    - Abstract submission: Check website
+//    - Final presentation: Check website
 
-7. Rules and Regulations
-   - Plagiarism will lead to disqualification
-   - Decision of judges is final
-   - Code of conduct must be followed
-   - All participants must be present during presentation
+// 7. Rules and Regulations
+//    - Plagiarism will lead to disqualification
+//    - Decision of judges is final
+//    - Code of conduct must be followed
+//    - All participants must be present during presentation
 
-For more information, contact the organizing committee.
-    `;
+// For more information, contact the organizing committee.
+//     `;
 
-    const blob = new Blob([guidelinesText], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'ResearchAThon_Guidelines.txt';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
-  };
+//     const blob = new Blob([guidelinesText], { type: 'text/plain' });
+//     const url = window.URL.createObjectURL(blob);
+//     const link = document.createElement('a');
+//     link.href = url;
+//     link.download = 'ResearchAThon_Guidelines.txt';
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+//     window.URL.revokeObjectURL(url);
+//   };
 
 
 // const handleDownloadGuidelines = () => {
@@ -108,6 +111,24 @@ For more information, contact the organizing committee.
 //   link.click();
 // };
 
+
+
+const handleDownloadGuidelines = () => {
+  const link = document.createElement('a');
+  link.href = guidelinePDF;
+  link.download = 'ResearchAThon_Guidelines.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+const handleDownloadGuideliness = () => {
+  const link = document.createElement('a');
+  link.href = guidelinePDF;
+  link.download = 'Poster.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
 
   const handleShare = async () => {
@@ -147,43 +168,62 @@ For more information, contact the organizing committee.
         </div>
         <div className={styles.heroContent}>
           <div className={styles.titleWrapper}>
+            <h1 className={styles.zgb}>
+              {/* <img className={styles.logo} src={zb}></img> */}
+              <span className={styles.zgbHighlight}>Zigbee </span><span className={styles.presents}>Presents </span>
+            </h1>
             <h1 className={styles.title}>
-              Research<span className={styles.titleHighlight}>A</span>Thon
+              Rezo<span className={styles.titleHighlight}>N</span>ix
+            </h1>
+            <h1 className={styles.sub}>
+              Research<span className={styles.subHighlight}>A</span>Thon
             </h1>
             <p className={styles.tagline}>Innovate. Research. Transform.</p>
           </div>
 
           {/* Countdown Timer */}
-          <div className={styles.countdown}>
-            <div className={styles.timeBlock}>
-              <span className={styles.timeNumber}>{timeLeft.days}</span>
-              <span className={styles.timeLabel}>Days</span>
-            </div>
-            <div className={styles.timeSeparator}>:</div>
-            <div className={styles.timeBlock}>
-              <span className={styles.timeNumber}>{timeLeft.hours}</span>
-              <span className={styles.timeLabel}>Hours</span>
-            </div>
-            <div className={styles.timeSeparator}>:</div>
-            <div className={styles.timeBlock}>
-              <span className={styles.timeNumber}>{timeLeft.minutes}</span>
-              <span className={styles.timeLabel}>Minutes</span>
-            </div>
-            <div className={styles.timeSeparator}>:</div>
-            <div className={styles.timeBlock}>
-              <span className={styles.timeNumber}>{timeLeft.seconds}</span>
-              <span className={styles.timeLabel}>Seconds</span>
-            </div>
-          </div>
+{/* Countdown Timer */}
+{eventStarted ? (
+  <div className={styles.eventStarted}>
+    <h2 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#ffffff', marginBottom: '1.5rem'}}>
+      Event Started! 🎉<br/>
+    </h2>
+  </div>
+) : (
+  <div className={styles.countdown}>
+    <div className={styles.timeBlock}>
+      <span className={styles.timeNumber}>{timeLeft.days}</span>
+      <span className={styles.timeLabel}>Days</span>
+    </div>
+    <div className={styles.timeSeparator}>:</div>
+    <div className={styles.timeBlock}>
+      <span className={styles.timeNumber}>{timeLeft.hours}</span>
+      <span className={styles.timeLabel}>Hours</span>
+    </div>
+    <div className={styles.timeSeparator}>:</div>
+    <div className={styles.timeBlock}>
+      <span className={styles.timeNumber}>{timeLeft.minutes}</span>
+      <span className={styles.timeLabel}>Minutes</span>
+    </div>
+    <div className={styles.timeSeparator}>:</div>
+    <div className={styles.timeBlock}>
+      <span className={styles.timeNumber}>{timeLeft.seconds}</span>
+      <span className={styles.timeLabel}>Seconds</span>
+    </div>
+  </div>
+)}
 
           {/* CTA Button */}
-          <button className={styles.ctaButton}   onClick={() => window.open("https://forms.gle/2CBuPh26GHBUCZLz8", "_blank")}
->
-            <span>Register Now - Don't Miss Out!</span>
-            <svg className={styles.arrow} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </button>
+{/* CTA Button - Only show before event starts */}
+{!eventStarted && (
+  <button className={styles.ctaButton} onClick={() => window.open("https://forms.gle/2CBuPh26GHBUCZLz8", "_blank")}>
+    <span>Register Now - Don't Miss Out!</span>
+    <svg className={styles.arrow} viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+    </svg>
+  </button>
+)}
+
         </div>
 
         <div className={styles.heroAnimation}>
@@ -203,6 +243,12 @@ For more information, contact the organizing committee.
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Download PDF
+            </button>
+            <button className={styles.downloadBtn} onClick={handleDownloadGuideliness}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Poster
             </button>
             <button className={styles.shareBtn} onClick={handleShare}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -258,6 +304,7 @@ For more information, contact the organizing committee.
               <p>Register your team & faculty guide details and Topic .</p>
               <span className={styles.timelineDate}>Registration</span>
               <span className={styles.timelineDate}>Team Formation</span>
+              <span className={styles.lineDate}>05-11-2025</span>
             </div>
           </div>\
 
@@ -269,6 +316,8 @@ For more information, contact the organizing committee.
               <span className={styles.timelineDate}>Week 1</span>
               <span className={styles.timelineDate}>Briefing</span>
               <span className={styles.timelineDate}>Goodies</span>
+              <span className={styles.lineDate}>12-11-2025</span>
+
             </div>
           </div>
 
@@ -280,6 +329,7 @@ For more information, contact the organizing committee.
               <span className={styles.timelineDate}>Week 2</span>
               <span className={styles.timelineDate}>Presentation</span>
               <span className={styles.timelineDate}>Quiz</span>
+              <span className={styles.lineDate}>19-11-2025</span>
             </div>
           </div>
 
@@ -291,6 +341,7 @@ For more information, contact the organizing committee.
               <span className={styles.timelineDate}>Week 3</span>
               <span className={styles.timelineDate}>Quiz</span>
               <span className={styles.timelineDate}>Evaluation</span>
+              <span className={styles.lineDate}>26-11-2025</span>
             </div>
           </div>
         </div>
@@ -309,7 +360,7 @@ For more information, contact the organizing committee.
             <p>Fostering innovation and research excellence among students. We organize hackathons, workshops, and research seminars to promote technological advancement and creative problem-solving.</p>
             <div className={styles.clubStats}>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>500+</span>
+                <span className={styles.statNumber}>55+</span>
                 <span className={styles.statLabel}>Members</span>
               </div>
               <div className={styles.stat}>
@@ -317,7 +368,7 @@ For more information, contact the organizing committee.
                 <span className={styles.statLabel}>Events</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNumber}>100+</span>
+                <span className={styles.statNumber}>45+</span>
                 <span className={styles.statLabel}>Projects</span>
               </div>
             </div>
@@ -329,31 +380,30 @@ For more information, contact the organizing committee.
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Contact Us</h2>
         <div className={styles.contactGrid}>
-          <div className={styles.contactCard}>
+          {/* <div className={styles.contactCard}>
             <div className={styles.contactIcon}>📧</div>
             <h3>Email</h3>
             <p>researchathon@college.edu</p>
-            <p>innovationclub@college.edu</p>
-          </div>
-          <div className={styles.contactCard}>
+          </div> */}
+          {/* <div className={styles.contactCard}>
             <div className={styles.contactIcon}>📱</div>
             <h3>Phone</h3>
             <p>+91 98765 43210</p>
             <p>+91 98765 43211</p>
-          </div>
+          </div> */}
           <div className={styles.contactCard}>
             <div className={styles.contactIcon}>📍</div>
-            <h3>Location</h3>
-            <p>Main Auditorium</p>
-            <p>College Campus, City</p>
+            <h3>Venue</h3>
+            <p>Seminar Hall</p>
+            <p>Room no-001</p>
           </div>
           <div className={styles.contactCard}>
             <div className={styles.contactIcon}>🌐</div>
             <h3>Social Media</h3>
             <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialLink}>Instagram</a>
-              <a href="#" className={styles.socialLink}>LinkedIn</a>
-              <a href="#" className={styles.socialLink}>Twitter</a>
+              <a href="https://www.instagram.com/zigbee_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/zigbee-club-fetju/" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-linkedin"></i></a>
+              <a href="https://chat.whatsapp.com/KaxOWNmnWx5C7niGCgd7s0" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
         </div>
@@ -361,8 +411,8 @@ For more information, contact the organizing committee.
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <p>&copy; 2025 ResearchAThon. All rights reserved.</p>
-        <p>Organized by Research & Innovation Club</p>
+        {/* <p>&copy; 2025 ResearchAThon. All rights reserved.</p> */}
+        <p>Organized by The Zigbee Club</p>
       </footer>
     </div>
   );

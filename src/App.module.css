@@ -48,7 +48,23 @@
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 6.2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  letter-spacing: -2px;
+}
+.zgb {
+  
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  letter-spacing: -2px;
+}
+.sub {
+  color: #ccc9c9;
+  font-size: 4.3rem;
   font-weight: 900;
   margin-bottom: 20px;
   text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
@@ -59,6 +75,18 @@
   color: #ffd700;
   animation: glow 2s ease-in-out infinite;
 }
+.presents {
+  font-size: 2rem;
+}
+.zgbHighlight {
+  color: #8fff00;
+  font-family: 'Orbitron', sans-serif;
+}
+.subHighlight {
+  color: #ffd700;
+  animation: glow 2s ease-in-out infinite;
+}
+
 
 .tagline {
   font-size: 1.5rem;
@@ -392,6 +420,16 @@
   font-weight: 600;
   margin: 4px;
 }
+.lineDate {
+  display: inline-block;
+  background: rgba(237, 238, 240, 0.758);
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-size: 1rem;
+  color: #111111;
+  font-weight: 600;
+  margin: 4px;
+}
 
 /* Club Card */
 .clubCard {
@@ -494,7 +532,7 @@
 .contactCard:hover {
   transform: translateY(-10px);
   border-color: #ffffff;
-  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+  /* box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3); */
 }
 
 .contactIcon {
@@ -515,22 +553,22 @@
 
 .socialLinks {
   display: flex;
-  justify-content: center;
   gap: 15px;
-  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .socialLink {
+  font-size: 2rem; /* 🔹 increase icon size here */
   color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .socialLink:hover {
-  color: #764ba2;
-  transform: translateY(-2px);
+  transform: translateY(-5px) scale(1.1);
+  color: #00bcd4; /* optional hover color */
 }
+
 
 /* Footer */
 .footer {
@@ -624,6 +662,9 @@
 @media (max-width: 768px) {
   .title {
     font-size: 3rem;
+  }
+  .sub {
+    font-size: 2.5rem;
   }
 
   .tagline {
