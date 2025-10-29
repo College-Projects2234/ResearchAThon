@@ -107,7 +107,7 @@ const handleDownloadGuideliness = () => {
             <h1 className={styles.sub}>
               Research<span className={styles.subHighlight}></span>Thon
             </h1>
-            <p className={styles.tagline}>Innovate. Research. Transform.</p>
+            <p className={styles.tagline}>Research. Transform. Publish.</p>
           </div>
 
           {/* Countdown Timer */}
