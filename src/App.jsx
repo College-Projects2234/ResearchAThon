@@ -12,7 +12,7 @@ function Home() {
   });
 
   // Set your event date here
-  const eventDate = new Date('2025-11-15T09:00:00').getTime();
+  const eventDate = new Date('2025-10-29T11:07:00').getTime();
 
   useEffect(() => {
     const timer = setInterval(() => {
