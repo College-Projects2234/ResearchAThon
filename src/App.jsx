@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import Beams from './Beams';
+import zb from './img/image.png'
 
 function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -97,6 +98,17 @@ For more information, contact the organizing committee.
     document.body.removeChild(link);
     window.URL.revokeObjectURL(url);
   };
+
+
+// const handleDownloadGuidelines = () => {
+//   const link = document.createElement('a');
+//   link.href = 'https://example.com/ResearchAThon_Guidelines.pdf';
+//   link.download = 'ResearchAThon_Guidelines.pdf';
+//   link.target = '_blank'; // optional — opens new tab
+//   link.click();
+// };
+
+
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -243,40 +255,42 @@ For more information, contact the organizing committee.
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>Registration & Team Formation</h3>
-              <p>Register your team and submit basic details. Form teams of 1-5 members with a faculty guide.</p>
+              <p>Register your team & faculty guide details and Topic .</p>
+              <span className={styles.timelineDate}>Registration</span>
+              <span className={styles.timelineDate}>Team Formation</span>
+            </div>
+          </div>\
+
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineDot}></div>
+            <div className={styles.timelineContent}>
+              <h3>Briefing and Commencement</h3>
+              <p>-Expert Faculties will be interacting with the students and educating them about the process from Format to Publishing.<br/> -Start working on your Reasearch Paper.</p>
               <span className={styles.timelineDate}>Week 1</span>
+              <span className={styles.timelineDate}>Briefing</span>
+              <span className={styles.timelineDate}>Goodies</span>
             </div>
           </div>
+
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>Abstract Submission</h3>
-              <p>Submit your project abstract (500 words) with problem statement and proposed methodology.</p>
+              <p>- Stuents will present the basic idea behind their project and present it.<br/>-Participants will come with their half completed paper and interact with the mentors to get feedbacks, doubts and improvements.</p>
               <span className={styles.timelineDate}>Week 2</span>
+              <span className={styles.timelineDate}>Presentation</span>
+              <span className={styles.timelineDate}>Quiz</span>
             </div>
           </div>
-          <div className={styles.timelineItem}>
-            <div className={styles.timelineDot}></div>
-            <div className={styles.timelineContent}>
-              <h3>Shortlisting & Announcement</h3>
-              <p>Selected teams will be notified via email. Prepare for the main event presentation.</p>
-              <span className={styles.timelineDate}>Week 3</span>
-            </div>
-          </div>
+
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>Final Presentation</h3>
-              <p>Present your research work to the jury. Showcase your innovation and implementation.</p>
-              <span className={styles.timelineDate}>Event Day</span>
-            </div>
-          </div>
-          <div className={styles.timelineItem}>
-            <div className={styles.timelineDot}></div>
-            <div className={styles.timelineContent}>
-              <h3>Award Ceremony</h3>
-              <p>Winners announced! Prizes, certificates, and recognition for outstanding projects.</p>
-              <span className={styles.timelineDate}>Event Day</span>
+              <p>-Present your research work to the jury. Showcase your innovation and implementation.<br/>-Judges will evaluate the scores.</p>
+              <span className={styles.timelineDate}>Week 3</span>
+              <span className={styles.timelineDate}>Quiz</span>
+              <span className={styles.timelineDate}>Evaluation</span>
             </div>
           </div>
         </div>
@@ -287,10 +301,11 @@ For more information, contact the organizing committee.
         <h2 className={styles.sectionTitle}>Organized By</h2>
         <div className={styles.clubCard}>
           <div className={styles.clubLogo}>
-            <div className={styles.logoCircle}>RC</div>
+            {/* <div className={styles.logoCircle}>RC</div> */}
+            <img className={styles.logo} src={zb}></img>
           </div>
           <div className={styles.clubInfo}>
-            <h3>The ZigbeeClub</h3>
+            <h3>The Zigbee Club</h3>
             <p>Fostering innovation and research excellence among students. We organize hackathons, workshops, and research seminars to promote technological advancement and creative problem-solving.</p>
             <div className={styles.clubStats}>
               <div className={styles.stat}>
