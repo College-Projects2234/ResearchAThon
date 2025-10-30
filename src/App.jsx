@@ -22,7 +22,7 @@ useEffect(() => {
   const timer = setInterval(() => {
     const now = new Date().getTime();
     const distance = eventDate - now;
-    console.log(distance)
+    // console.log(distance)
     if (distance <= 0) {
       clearInterval(timer);
       setEventStarted(true);
