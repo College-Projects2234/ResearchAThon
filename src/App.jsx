@@ -166,7 +166,7 @@ const handleDownloadGuideliness = () => {
       {/* Guidelines Section */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Guidelines</h2>
+          <h2 className={styles.sectionTitle}>Features</h2>
           <div className={styles.actionButtons}>
             <button className={styles.downloadBtn} onClick={handleDownloadGuidelines}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -300,8 +300,8 @@ const handleDownloadGuideliness = () => {
           <div className={styles.contactCard}>
             <div className={styles.contactIcon}>📍</div>
             <h3>Venue</h3>
-            <p>Seminar Hall</p>
-            <p>Room no-001</p>
+            <p>Seminar Hall - FET</p>
+            {/* <p>Room no-001</p> */}
           </div>
           <div className={styles.contactCard}>
             <div className={styles.contactIcon}>🌐</div>
