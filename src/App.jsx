@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import Beams from './Beams';
 import zb from './img/image.png'
+import hack from './img/img2.jpg'
 import guidelinePDF from './assets/ResearchAThon_Guidelines.pdf';
 import posterPDF from './assets/Poster.pdf';
 
@@ -173,12 +174,12 @@ const handleDownloadGuideliness = () => {
               </svg>
               Download Event Guidelines
             </button>
-            <button className={styles.downloadBtn} onClick={handleDownloadGuideliness}>
+            {/* <button className={styles.downloadBtn} onClick={handleDownloadGuideliness}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               Download Poster
-            </button>
+            </button> */}
             <button className={styles.shareBtn} onClick={handleShare}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -190,53 +191,23 @@ const handleDownloadGuideliness = () => {
         
         <div className={styles.guidelinesGrid}>
           <div className={styles.guidelineCard}>
-            <div className={styles.guidelineIcon}>📋</div>
-            <h3></h3>
-            <ul>
-              <li>Teams can have  a minimum of 1 member. Each team must have a faculty mentor/guide.</li>
-              <li>Open to all B.Tech and M.Tech CSE students</li>
-              <li>Teams can include members from different years or specializations</li>
-              <li>Participants can choose their own faculty mentor with prior approval.</li>
-              <li>Research work must be original, innovative, and plagiarism-free</li>
-              <li>No plagiarism. Follow code of conduct. All team members must be present during presentation.</li>
-              <li>Presentation should be in PowerPoint (PPT) format and paper work should also be presented.</li>
-              <li>Presentation Time: 5–7 minutes + 2 minutes for Q&A.</li>
-            </ul>
+  <div className={styles.guidelineIcon}>💡</div>
+  <h3>Ideate</h3>
+  <p>Bring your best research concept to life! Work on real-world problems and explore innovative solutions under expert guidance.</p>
+</div>
 
+<div className={styles.guidelineCard}>
+  <div className={styles.guidelineIcon}>🧠</div>
+  <h3>Analyze</h3>
+  <p>Dive deep into research and experimentation. Learn, analyze, and refine your findings with mentor support throughout the challenge.</p>
+</div>
 
-          </div>
-          {/* <div className={styles.guidelineCard}>
-            <div className={styles.guidelineIcon}>👥</div>
-            <h3>Team Formation</h3>
-            <p>- Teams can have  a minimum of 1 member. Each team must have a faculty mentor/guide.<br/> - Participants can choose their own faculty mentor with prior
-approval.
-</p>
-          </div>
-          <div className={styles.guidelineCard}>
-            <div className={styles.guidelineIcon}>✅</div>
-            <h3>Eligibility</h3>
-            <p>Open to all B.Tech and M.Tech CSE students</p>
-          </div> */}
-          {/* <div className={styles.guidelineCard}>
-            <div className={styles.guidelineIcon}>💡</div>
-            <h3>Project Requirements</h3>
-            <p>Original research work with clear problem statement, methodology, and proper documentation.</p>
-          </div> */}
-          {/* <div className={styles.guidelineCard}>
-            <div className={styles.guidelineIcon}>📝</div>
-            <h3>Submission</h3>
-            <p>Submit project abstract (500 words max), timeline, technologies used, and team details.</p>
-          </div> */}
-          {/* <div className={styles.guidelineCard}>
-            <div className={styles.guidelineIcon}>⭐</div>
-            <h3>Evaluation</h3>
-            <p>Judged on innovation, technical implementation, social impact, presentation, and feasibility.</p>
-          </div>
-          <div className={styles.guidelineCard}>
-            <div className={styles.guidelineIcon}>📋</div>
-            <h3>Rules</h3>
-            <p>No plagiarism. Follow code of conduct. All team members must be present during presentation.</p>
-          </div> */}
+<div className={styles.guidelineCard}>
+  <div className={styles.guidelineIcon}>🎤</div>
+  <h3>Present</h3>
+  <p>Showcase your research journey and results in front of a panel of judges. Gain recognition, feedback, and a chance to publish your paper!</p>
+</div>
+
         </div>
       </section>
 
@@ -324,7 +295,7 @@ approval.
 
       {/* Contact Section */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Contact Us</h2>
+        {/* <h2 className={styles.sectionTitle}>Contact Us</h2> */}
         <div className={styles.contactGrid}>
           <div className={styles.contactCard}>
             <div className={styles.contactIcon}>📍</div>
@@ -338,7 +309,7 @@ approval.
             <div className={styles.socialLinks}>
               <a href="https://www.instagram.com/zigbee_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-instagram"></i></a>
               <a href="https://www.linkedin.com/company/zigbee-club-fetju/" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-linkedin"></i></a>
-              <a href="https://chat.whatsapp.com/KaxOWNmnWx5C7niGCgd7s0" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-whatsapp"></i></a>
+              {/* <a href="https://chat.whatsapp.com/KaxOWNmnWx5C7niGCgd7s0" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-whatsapp"></i></a> */}
             </div>
           </div>
         </div>
