@@ -546,6 +546,9 @@
   flex-direction: column;
   align-items: center;
 }
+.statt i{
+  font-size: 2rem;
+}
 
 .statNumber {
   font-size: 2rem;

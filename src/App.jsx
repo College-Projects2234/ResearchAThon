@@ -96,7 +96,7 @@ const handleDownloadGuideliness = () => {
             scale={0.25}
             rotation={0}
           />
-        </div>
+        </div> 
         <div className={styles.heroContent}>
           <div className={styles.titleWrapper}>
             <h1 className={styles.zgb}>
@@ -253,11 +253,11 @@ const handleDownloadGuideliness = () => {
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>Briefing and Commencement</h3>
-              <p>-Expert Faculties will be interacting with the students and educating them about the process from Format to Publishing.<br/> -Start working on your Reasearch Paper.</p>
+              <p>-Expert Faculties will be interacting with the students and educating them about the process from Format to Publishing.<br/> -Start with Literature Surveys and decide your topic along your Guide.</p>
               <span className={styles.timelineDate}>Week 1</span>
               <span className={styles.timelineDate}>Briefing</span>
               <span className={styles.timelineDate}>Goodies</span>
-              <span className={styles.lineDate}>05-11-2025</span>
+              {/* <span className={styles.lineDate}>05-11-2025</span> */}
 
             </div>
           </div>
@@ -265,24 +265,24 @@ const handleDownloadGuideliness = () => {
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
-              <h3>Abstract Submission</h3>
-              <p>- Stuents will present the basic idea behind their project and present it.<br/>-Participants will come with their half completed paper and interact with the mentors to get feedbacks, doubts and improvements.</p>
+              <h3>First Review</h3>
+              <p>- Stuents will present the basic idea behind their project and present it.<br/>-Participants will come with completed Literature Surveys.<br/>- Interact with the mentors to get feedbacks, doubts and improvements.</p>
               <span className={styles.timelineDate}>Week 2</span>
               <span className={styles.timelineDate}>Presentation</span>
               <span className={styles.timelineDate}>Quiz</span>
-              <span className={styles.lineDate}>12-11-2025</span>
+              {/* <span className={styles.lineDate}>12-11-2025</span> */}
             </div>
           </div>
 
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
-              <h3>Final Showcase</h3>
-              <p>-Showcase your research work to the jury. Showcase your innovation and implementation.<br/>-Judges will evaluate the scores.</p>
+              <h3>Final Showcase and Evaluation</h3>
+              <p>-Showcase your completed research work to the jury. Showcase your innovation and implementation.<br/>-Judges will evaluate the scores.</p>
               <span className={styles.timelineDate}>Week 3</span>
               <span className={styles.timelineDate}>Quiz</span>
               <span className={styles.timelineDate}>Evaluation</span>
-              <span className={styles.lineDate}>19-11-2025</span>
+              {/* <span className={styles.lineDate}>19-11-2025</span> */}
             </div>
           </div>
         </div>
@@ -297,19 +297,19 @@ const handleDownloadGuideliness = () => {
           </div>
           <div className={styles.clubInfo}>
             <h3>The <span className={styles.zgbHighlight}>Zigbee </span> Club</h3>
-            <p>Fostering innovation and research excellence among students. We organize hackathons, workshops, and research seminars to promote technological advancement and creative problem-solving.</p>
+            <p>A group of visionary students from CSE–IoT, united by a passion for pushing the boundaries of innovation and connectivity. Our mission is to create a dynamic network hub — a collaborative space where technology, creativity, and imagination converge.</p>
             <div className={styles.clubStats}>
-              <div className={styles.stat}>
-                <span className={styles.statNumber}>55+</span>
-                <span className={styles.statLabel}>Members</span>
+              <div className={styles.statt}>
+              <a href="https://www.instagram.com/zigbee_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-instagram"></i></a>
+                {/* <span className={styles.statLabel}>Members</span> */}
               </div>
-              <div className={styles.stat}>
-                <span className={styles.statNumber}>50+</span>
-                <span className={styles.statLabel}>Events</span>
+              <div className={styles.statt}>
+              <a href="https://www.linkedin.com/company/zigbee-club-fetju/" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-linkedin"></i></a>
+                {/* <span className={styles.statLabel}>Events</span> */}
               </div>
-              <div className={styles.stat}>
-                <span className={styles.statNumber}>45+</span>
-                <span className={styles.statLabel}>Projects</span>
+              <div className={styles.statt}>
+              <a href="https://github.com/ZigbeeFETSC" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-github"></i></a>
+                {/* <span className={styles.statLabel}>Projects</span> */}
               </div>
             </div>
           </div>
@@ -317,26 +317,7 @@ const handleDownloadGuideliness = () => {
       </section>
 
       {/* Contact Section */}
-      <section className={styles.section}>
-        {/* <h2 className={styles.sectionTitle}>Contact Us</h2> */}
-        <div className={styles.contactGrid}>
-          <div className={styles.contactCard}>
-            <div className={styles.contactIcon}>📍</div>
-            <h3>Venue</h3>
-            <p>Seminar Hall - FET</p>
-            {/* <p>Room no-001</p> */}
-          </div>
-          <div className={styles.contactCard}>
-            <div className={styles.contactIcon}>🌐</div>
-            <h3>Social Media</h3>
-            <div className={styles.socialLinks}>
-              <a href="https://www.instagram.com/zigbee_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/zigbee-club-fetju/" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-linkedin"></i></a>
-              {/* <a href="https://chat.whatsapp.com/KaxOWNmnWx5C7niGCgd7s0" target='_blank' rel='noopener noreferrer' className={styles.socialLink}><i class="fab fa-whatsapp"></i></a> */}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Footer */}
       <footer className={styles.footer}>
