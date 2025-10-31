@@ -70,6 +70,20 @@
   text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
   letter-spacing: -2px;
 }
+.subb {
+  color: #aca8a8;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  letter-spacing: -2px;
+}
+.contner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
 .titleHighlight {
   color: #ffd700;
@@ -219,13 +233,14 @@
 
 /* Section Styles */
 .section {
-  padding: 100px 20px;
+  padding: 150px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .sectionHeader {
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
@@ -291,14 +306,35 @@
 .guidelineCard {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
   padding: 2rem;
-  font-size: 18px;
+  font-size: 19px;
   border-radius: 16px;
   border: 1px solid rgba(102, 126, 234, 0.2);
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease-out both;
 }
-.guidelineCard li{
+
+.guidelineCardd {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 0.5rem;
+  font-size: 19px;
+  border-radius: 16px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+.guidelineCardd li{
   margin: 2rem;
+}
+.guidelineCardd i{
+  color: #5195ee;
+}
+.cardCont{
+  display: flex;
+  justify-content: space-between;
+
+}
+.xll{
+  height: 2rem;
 }
 .guidelineCard:nth-child(1) { animation-delay: 0.1s; }
 .guidelineCard:nth-child(2) { animation-delay: 0.2s; }
@@ -327,6 +363,14 @@
 .guidelineCard p {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
+}
+
+.guidelineCardd ul{
+  list-style-type: none;
+}
+
+.guidelineCard ul{
+  list-style-type: none;
 }
 
 /* Timeline */
@@ -434,6 +478,9 @@
   color: #111111;
   font-weight: 600;
   margin: 4px;
+}
+.tx{
+  color: rgb(27, 59, 240);
 }
 
 /* Club Card */
@@ -764,11 +811,26 @@
   }
   .guidelineCard {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-  padding: 30px;
-  font-size: 15px;
+  padding: 24px;
+  font-size: 14px;
   border-radius: 16px;
   border: 1px solid rgba(102, 126, 234, 0.2);
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease-out both;
+}
+  .guidelineCardd {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+.xll{
+  display: none;
+}
+.subb{
+  font-size: 2rem;
 }
 }

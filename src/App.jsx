@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import Beams from './Beams';
 import zb from './img/image.png'
+import xl from './img/tx.svg'
 import hack from './img/img2.jpg'
 import guidelinePDF from './assets/ResearchAThon_Guidelines.pdf';
 import posterPDF from './assets/Poster.pdf';
@@ -106,7 +107,7 @@ const handleDownloadGuideliness = () => {
               Rezo<span className={styles.titleHighlight}>N</span>ix
             </h1>
             <h1 className={styles.sub}>
-              Research<span className={styles.subHighlight}></span>Thon
+              ResearchThon
             </h1>
             <p className={styles.tagline}>Research. Transform. Publish.</p>
           </div>
@@ -164,22 +165,16 @@ const handleDownloadGuideliness = () => {
       </section>
 
       {/* Guidelines Section */}
-      <section className={styles.section}>
+<section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Features</h2>
+          <h2 className={styles.sectionTitle}>About Event</h2>          
           <div className={styles.actionButtons}>
             <button className={styles.downloadBtn} onClick={handleDownloadGuidelines}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              Download Event Guidelines
-            </button>
-            {/* <button className={styles.downloadBtn} onClick={handleDownloadGuideliness}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
               Download Poster
-            </button> */}
+            </button>
             <button className={styles.shareBtn} onClick={handleShare}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -191,25 +186,43 @@ const handleDownloadGuideliness = () => {
         
         <div className={styles.guidelinesGrid}>
           <div className={styles.guidelineCard}>
-  <div className={styles.guidelineIcon}>💡</div>
-  <h3>Ideate</h3>
-  <p>Bring your best research concept to life! Work on real-world problems and explore innovative solutions under expert guidance.</p>
-</div>
-
-<div className={styles.guidelineCard}>
-  <div className={styles.guidelineIcon}>🧠</div>
-  <h3>Analyze</h3>
-  <p>Dive deep into research and experimentation. Learn, analyze, and refine your findings with mentor support throughout the challenge.</p>
-</div>
-
-<div className={styles.guidelineCard}>
-  <div className={styles.guidelineIcon}>🎤</div>
-  <h3>Present</h3>
-  <p>Showcase your research journey and results in front of a panel of judges. Gain recognition, feedback, and a chance to publish your paper!</p>
-</div>
+          <div className={styles.guidelineIcon}>
+            <h1 className={styles.subb}>
+              ResearchThon
+            </h1>
+          </div>
+          <p>This event aims to encourage innovation and research among CSE students. Participants will showcase their original ideas and findings through a short presentation and paper submission. It’s a platform to share knowledge, explore emerging technologies, and inspire creative problem-solving within the computing community.</p>
+        </div>
 
         </div>
-      </section>
+</section>
+<section className={styles.section}>
+        <div className={styles.sectionHeader}>          
+          <h2 className={styles.sectionTitle}>Guidelines</h2>
+          <div className={styles.cardCont}>
+            <div className={styles.guidelineCardd}>
+              <ul>
+                <li><i class="fa-regular fa-circle-check"></i>  Open to all B.Tech and M.Tech CSE students.</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Participants can compete individually or in teams.</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Teams may include members from different years or specializations.</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Each team must have a faculty mentor/guide.</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Participants can choose their own research topic with mentor approval.</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Research work must be original, innovative, and plagiarism-free.</li>
+                <li><i class="fa-regular fa-circle-check"></i>  The event flow and evaluation process will be explained during Week 1.</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Plagiarism beyond acceptable limits will lead to disqualification.</li>
+              </ul>
+            </div>
+            <div>
+            <div className={styles.xll}>
+              <img src={xl}/>
+            </div>
+            </div>
+          </div>
+
+
+        </div>
+
+</section>
 
       {/* Event Flow Section */}
       <section className={styles.section}>
@@ -222,7 +235,7 @@ const handleDownloadGuideliness = () => {
               <p>Register your team & faculty guide details and Topic .</p>
               <span className={styles.timelineDate}>Registration</span>
               <span className={styles.timelineDate}>Team Formation</span>
-              <span className={styles.lineDate}>05-11-2025</span>
+              <span className={styles.lineDate}><span className={styles.tx}>Closes</span> on  05-11-2025</span>
             </div>
           </div>
 
@@ -234,7 +247,7 @@ const handleDownloadGuideliness = () => {
               <span className={styles.timelineDate}>Week 1</span>
               <span className={styles.timelineDate}>Briefing</span>
               <span className={styles.timelineDate}>Goodies</span>
-              <span className={styles.lineDate}>12-11-2025</span>
+              <span className={styles.lineDate}>05-11-2025</span>
 
             </div>
           </div>
@@ -247,7 +260,7 @@ const handleDownloadGuideliness = () => {
               <span className={styles.timelineDate}>Week 2</span>
               <span className={styles.timelineDate}>Presentation</span>
               <span className={styles.timelineDate}>Quiz</span>
-              <span className={styles.lineDate}>19-11-2025</span>
+              <span className={styles.lineDate}>12-11-2025</span>
             </div>
           </div>
 
@@ -259,7 +272,7 @@ const handleDownloadGuideliness = () => {
               <span className={styles.timelineDate}>Week 3</span>
               <span className={styles.timelineDate}>Quiz</span>
               <span className={styles.timelineDate}>Evaluation</span>
-              <span className={styles.lineDate}>26-11-2025</span>
+              <span className={styles.lineDate}>19-11-2025</span>
             </div>
           </div>
         </div>
@@ -273,7 +286,7 @@ const handleDownloadGuideliness = () => {
             <img className={styles.logo} src={zb}></img>
           </div>
           <div className={styles.clubInfo}>
-            <h3>The Zigbee Club</h3>
+            <h3>The <span className={styles.zgbHighlight}>Zigbee </span> Club</h3>
             <p>Fostering innovation and research excellence among students. We organize hackathons, workshops, and research seminars to promote technological advancement and creative problem-solving.</p>
             <div className={styles.clubStats}>
               <div className={styles.stat}>
