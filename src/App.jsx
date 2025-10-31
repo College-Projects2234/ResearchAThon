@@ -110,6 +110,7 @@ const handleDownloadGuideliness = () => {
               ResearchThon
             </h1>
             <p className={styles.tagline}>Research. Transform. Publish.</p>
+
           </div>
 
           {/* Countdown Timer */}
@@ -267,8 +268,8 @@ const handleDownloadGuideliness = () => {
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
-              <h3>Final Presentation</h3>
-              <p>-Present your research work to the jury. Showcase your innovation and implementation.<br/>-Judges will evaluate the scores.</p>
+              <h3>Final Showcase</h3>
+              <p>-Showcase your research work to the jury. Showcase your innovation and implementation.<br/>-Judges will evaluate the scores.</p>
               <span className={styles.timelineDate}>Week 3</span>
               <span className={styles.timelineDate}>Quiz</span>
               <span className={styles.timelineDate}>Evaluation</span>
