@@ -112,6 +112,15 @@ const handleDownloadGuideliness = () => {
             <p className={styles.tagline}>Research. Transform. Publish.</p>
 
           </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <h3 style={{ display: "flex", alignItems: "baseline", gap: "6px" }}>
+              Starts on{" "}
+              <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>5th</span> Nov{" "}
+              <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>2025</span>
+            </h3>
+          </div>
+         
+         <br></br><br></br>
 
           {/* Countdown Timer */}
 {/* Countdown Timer */}
