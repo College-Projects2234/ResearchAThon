@@ -228,7 +228,13 @@ const handleDownloadGuideliness = () => {
               ResearchThon
             </h1>
           </div>
-          <p>This event aims to encourage innovation and research among CSE students. Participants will showcase their original ideas and findings through a short presentation and paper submission. It’s a platform to share knowledge, explore emerging technologies, and inspire creative problem-solving within the computing community.</p>
+          {/* <p>This event aims to encourage innovation and research among CSE students. Participants will showcase their original ideas and findings through a short presentation and paper submission. It’s a platform to share knowledge, explore emerging technologies, and inspire creative problem-solving within the computing community.</p> */}
+<p>
+  ResearchThon is an initiative designed to introduce students to the world of research papers — from understanding their structure and format to learning the process of publishing.<br/> Through interactive sessions led by faculty members, participants will gain valuable insights into effective research practices.<br/><br/>
+  The event features a contest where participants can apply their learning by presenting their own research ideas or papers. Outstanding submissions stand a chance to win exciting cash prizes.<br/><br/>
+  ResearchThon aims to foster a culture of research and innovation among students while promoting awareness about the importance of research papers.
+</p>
+
         </div>
 
         </div>
