@@ -5,6 +5,7 @@ import zb from './img/image.png'
 import xl from './img/tx.svg'
 import hack from './img/img2.jpg'
 import guidelinePDF from './assets/ResearchAThon_Guidelines.pdf';
+import pstr from './assets/pstr.pdf';
 import posterPDF from './assets/Poster.pdf';
 
 function Home() {
@@ -46,8 +47,8 @@ useEffect(() => {
 
 const handleDownloadGuidelines = () => {
   const link = document.createElement('a');
-  link.href = guidelinePDF;
-  link.download = 'ResearchAThon_Guidelines.pdf';
+  link.href = pstr;
+  link.download = 'pstr.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -113,11 +114,37 @@ const handleDownloadGuideliness = () => {
 
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <h3 style={{ display: "flex", alignItems: "baseline", gap: "6px" }}>
-              Starts on{" "}
-              <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>5th</span> Nov{" "}
-              <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>2025</span>
-            </h3>
+<h3
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "baseline",
+    justifyContent: "center",
+    gap: "8px",
+    fontSize: "clamp(1.2em, 3vw, 2em)", // scales with screen width
+    fontWeight: "600",
+    textAlign: "center",
+  }}
+>
+  <span style={{ fontSize: "clamp(1em, 2.5vw, 1.3em)" }}>Starts on</span>{" "}
+  <span
+    style={{
+      fontSize: "clamp(1.8em, 5vw, 3em)",
+      color: "#FFD700",
+      fontWeight: "bold",
+      textShadow: "0 0 10px rgba(255, 215, 0, 0.6)",
+    }}
+  >
+    5th
+  </span>{" "}
+  <span style={{ fontSize: "clamp(1em, 2.5vw, 1.5em)" }}>Nov</span>{" "}
+  <span style={{ fontSize: "clamp(1.2em, 3vw, 2em)", fontWeight: "bold" }}>
+    2025
+  </span>
+</h3>
+
+
+
           </div>
          
          <br></br><br></br>
