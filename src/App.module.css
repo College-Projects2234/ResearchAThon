@@ -435,6 +435,16 @@
   margin-right: 40px;
   transition: all 0.3s ease;
 }
+.timelineContent ul{
+list-style-type: none;
+}
+.timelineContent ul li{
+margin-bottom: 1rem;
+}
+
+.timelineContent i{
+  color: #5195ee;
+}
 
 .timelineItem:nth-child(even) .timelineContent {
   margin-right: 0;

@@ -242,7 +242,9 @@ const handleDownloadGuideliness = () => {
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>Registration & Team Formation</h3>
-              <p>Register your team & faculty guide details and Topic .</p>
+              <ul>
+                <li><i class="fa-regular fa-circle-check"></i> Register your team and topic with your faculty guide.</li>
+              </ul>
               <span className={styles.timelineDate}>Registration</span>
               <span className={styles.timelineDate}>Team Formation</span>
               <span className={styles.lineDate}><span className={styles.tx}>Closes</span> on  05-11-2025</span>
@@ -253,7 +255,14 @@ const handleDownloadGuideliness = () => {
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>Briefing and Commencement</h3>
-              <p>-Expert Faculties will be interacting with the students and educating them about the process from Format to Publishing.<br/> -Start with Literature Surveys and decide your topic along your Guide.</p>
+              {/* <p>-Expert Faculties will be interacting with the students and educating them about the process from Format to Publishing.<br/> -Start with Literature Surveys and decide your topic along your Guide.</p> */}
+              <ul>
+                <li><i class="fa-regular fa-circle-check"></i>  Inaugural Ceremony</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Expert Talk: From Research Format to Publication</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Topic Discussion with Mentor</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Literature Review Session</li>
+              </ul>
+
               <span className={styles.timelineDate}>Week 1</span>
               <span className={styles.timelineDate}>Briefing</span>
               <span className={styles.timelineDate}>Goodies</span>
@@ -266,7 +275,18 @@ const handleDownloadGuideliness = () => {
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>First Review</h3>
-              <p>- Stuents will present the basic idea behind their project and present it.<br/>-Participants will come with completed Literature Surveys.<br/>- Interact with the mentors to get feedbacks, doubts and improvements.</p>
+              {/* <p>- Stuents will present the basic idea behind their project and present it.<br/>-Participants will come with completed Literature Surveys.<br/>- Interact with the mentors to get feedbacks, doubts and improvements.</p> */}
+              <ul>
+                <li><i class="fa-regular fa-circle-check"></i>  Team Review</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Discusstion on Methodolody and Future Scope</li>
+              </ul>
+              <ul>
+                <li><i class="fa-regular fa-circle-check"></i> Team Review</li>
+                <li><i class="fa-regular fa-circle-check"></i> Discussion of Completed Literature Surveys</li>
+                <li><i class="fa-regular fa-circle-check"></i>  Discusstion on Methodolody and Future Scope</li>
+                <li><i class="fa-regular fa-circle-check"></i> Mentor Feedback and Guidance</li>
+              </ul>
+
               <span className={styles.timelineDate}>Week 2</span>
               <span className={styles.timelineDate}>Presentation</span>
               <span className={styles.timelineDate}>Quiz</span>
@@ -278,7 +298,13 @@ const handleDownloadGuideliness = () => {
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <h3>Final Showcase and Evaluation</h3>
-              <p>-Showcase your completed research work to the jury. Showcase your innovation and implementation.<br/>-Judges will evaluate the scores.</p>
+              {/* <p>-Showcase your completed research work to the jury. Showcase your innovation and implementation.<br/>-Judges will evaluate the scores.</p> */}
+              <ul>
+                <li><i class="fa-regular fa-circle-check"></i> Final Research Presentation and Implementation</li>
+                <li><i class="fa-regular fa-circle-check"></i> Jury Evaluation and Scoring</li>
+                <li><i class="fa-regular fa-circle-check"></i> Winner Announcement and Closing Ceremony</li>
+              </ul>
+
               <span className={styles.timelineDate}>Week 3</span>
               <span className={styles.timelineDate}>Quiz</span>
               <span className={styles.timelineDate}>Evaluation</span>
