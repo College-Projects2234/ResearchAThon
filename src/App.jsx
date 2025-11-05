@@ -156,12 +156,12 @@ const handleDownloadGuideliness = () => {
     <h2 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#ffffff', marginBottom: '1.5rem'}}>
       Event Started! 🎉<br/>
     </h2>
-    <button className={styles.ctaButton} onClick={() => window.open("https://forms.gle/2CBuPh26GHBUCZLz8", "_blank")}>
+    {/* <button className={styles.ctaButton} onClick={() => window.open("https://forms.gle/2CBuPh26GHBUCZLz8", "_blank")}>
     <span>Register Now - Don't Miss Out!</span>
     <svg className={styles.arrow} viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
     </svg>
-  </button>
+  </button> */}
   </div>
 ) : (
   <div className={styles.countdown}>
