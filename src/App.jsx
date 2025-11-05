@@ -154,7 +154,7 @@ const handleDownloadGuideliness = () => {
 {eventStarted ? (
   <div className={styles.eventStarted}>
     <h2 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#ffffff', marginBottom: '1.5rem'}}>
-      Event Started! 🎉<br/>
+      Event gonna Start soon, Be Ready 🎉<br/>
     </h2>
     <button className={styles.ctaButton} onClick={() => window.open("https://forms.gle/2CBuPh26GHBUCZLz8", "_blank")}>
     <span>Register Now - Don't Miss Out!</span>
