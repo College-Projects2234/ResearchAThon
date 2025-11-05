@@ -18,7 +18,7 @@ const [timeLeft, setTimeLeft] = useState({
 const [eventStarted, setEventStarted] = useState(false);
 
 // Set your event date here
-const eventDate = new Date('2025-11-05T09:30:00').getTime();
+const eventDate = new Date('2025-11-05T10:00:00').getTime();
 
 useEffect(() => {
   const timer = setInterval(() => {
