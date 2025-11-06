@@ -243,6 +243,26 @@ const handleDownloadGuideliness = () => {
 
         </div>
 
+        <div className='VideoEmbedd'>
+          <div className={styles.VideoEmbedd}>
+  <div className={styles.videoWrapper}>
+    <h2 className={styles.sectionTitle}>Guidelines and Event Flow</h2>
+    <div className={styles.videoContainer}>
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/MLNLlmHYV0Y"
+        title="RezoNix ResearchThon Introduction"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+        </div>
+
         </div>
 </section>
 <section className={styles.section}>
