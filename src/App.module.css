@@ -11,6 +11,8 @@
   overflow-x: hidden;
 }
 
+
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -872,6 +874,23 @@ margin-bottom: 1rem;
   justify-content: center;
   align-items: center; /* optional — centers horizontally */
 }
+}
+
+.upDown {
+  animation: upDown 1s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 

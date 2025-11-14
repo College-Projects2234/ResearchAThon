@@ -126,10 +126,10 @@ const handleDownloadGuideliness = () => {
     textAlign: "center",
   }}
 >
-  <span style={{ fontSize: "clamp(1em, 2.5vw, 1.3em)" }}>Starts on</span>{" "}
+  <span style={{ fontSize: "clamp(1em, 1vw, 1em)" }}>Event started on</span>{" "}
   <span
     style={{
-      fontSize: "clamp(1.8em, 5vw, 3em)",
+      fontSize: "clamp(1.5em, 3vw, 2em)",
       color: "#FFD700",
       fontWeight: "bold",
       textShadow: "0 0 10px rgba(255, 215, 0, 0.6)",
@@ -137,31 +137,40 @@ const handleDownloadGuideliness = () => {
   >
     5th
   </span>{" "}
-  <span style={{ fontSize: "clamp(1em, 2.5vw, 1.5em)" }}>Nov</span>{" "}
-  <span style={{ fontSize: "clamp(1.2em, 3vw, 2em)", fontWeight: "bold" }}>
+  <span style={{ fontSize: "clamp(1em, 1vw, 1em)" }}>Nov</span>{" "}
+  <span style={{ fontSize: "clamp(1em, 1vw, 1em)", fontWeight: "bold" }}>
     2025
   </span>
 </h3>
-
-
-
-          </div>
-         
-         <br></br><br></br>
+ </div>
+<div     
+className="arrow-bounce"
+style={{
+      fontSize: "clamp(1.9em, 5vw, 3em)", 
+      color: "#FFD700",
+      fontWeight: "bold",
+      // textShadow: "0 0 10px rgba(255, 215, 0, 0.6)",
+      marginTop: "4rem",
+    }}>
+  <i className={`fa-solid fa-arrow-down ${styles.upDown}`}></i>
+</div>
+<div
+style={
+  {
+    marginTop: "0.7rem",
+    fontSize: "1rem",
+  }
+}>
+  scroll down
+</div>
 
           {/* Countdown Timer */}
 {/* Countdown Timer */}
-{eventStarted ? (
+{/* {eventStarted ? (
   <div className={styles.eventStarted}>
     <h2 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#ffffff', marginBottom: '1.5rem'}}>
       Event Started! 🎉<br/>
     </h2>
-    {/* <button className={styles.ctaButton} onClick={() => window.open("https://forms.gle/2CBuPh26GHBUCZLz8", "_blank")}>
-    <span>Register Now - Don't Miss Out!</span>
-    <svg className={styles.arrow} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-    </svg>
-  </button> */}
   </div>
 ) : (
   <div className={styles.countdown}>
@@ -185,7 +194,7 @@ const handleDownloadGuideliness = () => {
       <span className={styles.timeLabel}>Seconds</span>
     </div>
   </div>
-)}
+)} */}
 
           {/* CTA Button */}
 {/* CTA Button - Only show before event starts */}
