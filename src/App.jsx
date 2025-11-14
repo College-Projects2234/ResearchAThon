@@ -8,7 +8,15 @@ import guidelinePDF from './assets/ResearchAThon_Guidelines.pdf';
 import pstr from './assets/pstr.pdf';
 import posterPDF from './assets/Poster.pdf';
 
+
 function Home() {
+  useEffect(() => {
+  const script = document.createElement("script");
+  script.src = "https://player.vimeo.com/api/player.js";
+  script.async = true;
+  document.body.appendChild(script);
+}, []);
+
 const [timeLeft, setTimeLeft] = useState({
   days: 0,
   hours: 0,
@@ -80,6 +88,10 @@ const handleDownloadGuideliness = () => {
       alert('Link copied to clipboard!');
     }
   };
+
+
+
+
 
   return (
     <div className={styles.container}>
@@ -237,7 +249,7 @@ style={
         </div>
         
         <div className={styles.guidelinesGrid}>
-          <div className={styles.guidelineCard}>
+            <div className={styles.guidelineCard}>
           <div className={styles.guidelineIcon}>
             <h1 className={styles.subb}>
               ResearchThon
@@ -250,30 +262,53 @@ style={
   ResearchThon aims to foster a culture of research and innovation among students while promoting awareness about the importance of research papers.
 </p>
 
-        </div>
+            </div>
 
-        <div className='VideoEmbedd'>
+            <div className='VideoEmbedd'>
           <div className={styles.VideoEmbedd}>
-  <div className={styles.videoWrapper}>
-    <h2 className={styles.sectionTitle}>Guidelines and Event Flow</h2>
-    <div className={styles.videoContainer}>
-      <iframe
-        width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/MLNLlmHYV0Y"
-        title="RezoNix ResearchThon Introduction"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
-  </div>
-</div>
+            <div className={styles.videoWrapper}>
+              <h2 className={styles.sectionTitle}>Guidelines and Event Flow</h2>
+              <div className={styles.videoContainer}>
 
-        </div>
+                      {/* <div   style={{    height: "clamp(250px, 60vw, 580px)",    position: "relative",  }}>
+                        <iframe
+                          src="https://player.vimeo.com/video/1136932882?badge=0&autopause=0&player_id=0&app_id=58479"
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                          title="ResearchThon"
+                        ></iframe>
+                      </div> */}
 
+
+
+
+
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://player.vimeo.com/video/1136932882?badge=0&autopause=0&player_id=0&app_id=58479"
+                  title="RezoNix ResearchThon Introduction"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+            </div>
+
+            <div>
+              
+            </div>
         </div>
 </section>
+
+
+
+
 <section className={styles.section}>
         <div className={styles.sectionHeader}>          
           <h2 className={styles.sectionTitle}>Guidelines</h2>
