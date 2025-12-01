@@ -162,7 +162,18 @@ const handleDownloadGuideliness = () => {
     28<sup>th</sup>
   </span>
 </h3>
+
  </div>
+     <span
+    style={{
+      fontSize: "clamp(2.5em, 3.5vw, 3.5em)",
+      color: "#FFD700",
+      fontWeight: "bold",
+      textShadow: "0 0 10px rgba(255, 215, 0, 0.6)",
+    }}
+  >
+    2025
+  </span>
 <div     
 className="arrow-bounce"
 style={{
