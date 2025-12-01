@@ -138,7 +138,7 @@ const handleDownloadGuideliness = () => {
     textAlign: "center",
   }}
 >
-  <span style={{ fontSize: "clamp(1em, 1vw, 1em)" }}>Event started on</span>{" "}
+  <span style={{ fontSize: "clamp(1em, 1vw, 1em)" }}>The Event was held from November</span>{" "}
   <span
     style={{
       fontSize: "clamp(1.5em, 3vw, 2em)",
@@ -147,11 +147,19 @@ const handleDownloadGuideliness = () => {
       textShadow: "0 0 10px rgba(255, 215, 0, 0.6)",
     }}
   >
-    5th
+    5<sup>th</sup>
   </span>{" "}
-  <span style={{ fontSize: "clamp(1em, 1vw, 1em)" }}>Nov</span>{" "}
-  <span style={{ fontSize: "clamp(1em, 1vw, 1em)", fontWeight: "bold" }}>
-    2025
+  <span style={{ fontSize: "clamp(1em, 1vw, 1em)" }}>to </span>
+  <span style={{ fontSize: "clamp(1em, 1vw, 1em)" }}> </span>
+    <span
+    style={{
+      fontSize: "clamp(1.5em, 3vw, 2em)",
+      color: "#FFD700",
+      fontWeight: "bold",
+      textShadow: "0 0 10px rgba(255, 215, 0, 0.6)",
+    }}
+  >
+    28<sup>th</sup>
   </span>
 </h3>
  </div>
